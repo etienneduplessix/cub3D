@@ -1,6 +1,5 @@
-#include "matrix.h"
-#include "vector.h"
-#include "game_struct.h"
+
+#include "../../include/cub.h"
 #include <math.h>
 
 static void	vector_rotate(t_matrix *rotation, t_vector_d *vector)

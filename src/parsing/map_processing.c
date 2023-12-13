@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   map_processing.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 13:08:32 by nroth             #+#    #+#             */
-/*   Updated: 2023/12/11 15:38:54 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2023/12/13 17:11:08 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map_parsing.h"
+#include "../../include/map_parsing.h"
+# include "../include/cub.h"
 
 size_t	ft_arrlen(void **s)
 {

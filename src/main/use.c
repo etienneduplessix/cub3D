@@ -1,13 +1,5 @@
 
-# include "map_parsing.h"
-# include "cub.h"
-
-
-#include "MLX42/MLX42.h"
-#include "cub3D.h"
-#include "game_struct.h"
-#include "libft.h"
-#include "parsing.h"
+# include "../../include/cub.h"
 
 static int		load_file(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
 					char *txt_file);

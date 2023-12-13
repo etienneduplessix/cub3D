@@ -1,6 +1,7 @@
 
 
-#include "map_parsing.h"
+#include "../../include/map_parsing.h"
+# include "../include/cub.h"
 
 
 void	ft_arrfree(void **arr)

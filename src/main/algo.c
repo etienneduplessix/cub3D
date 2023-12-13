@@ -1,8 +1,5 @@
-#include "MLX42/MLX42.h"
-#include "game_struct.h"
-#include "vector.h"
-#include <math.h>
-#include <stdio.h>
+# include "../../include/cub.h"
+
 
 static void		init_delta_dist(t_vector_d *delta_dist, t_vector_d *ray_dir);
 static void		init_loop(t_raycast *raycast, t_vector_d *player_pos);

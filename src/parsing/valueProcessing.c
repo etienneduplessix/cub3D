@@ -1,6 +1,6 @@
 
 
-#include "map_parsing.h"
+#include "../../include/map_parsing.h"
 
 /* gets called when a line defining a texture file path is found in the file. */
 bool	textureline_fill(t_mapInfo	*map_info, char **mapline_split)
@@ -81,7 +81,7 @@ bool	get_info(t_mapInfo	*map_info, char *map_line)
 	}
 	else if (ft_strlen(mapline_split[0]) == 1
 		&& (mapline_split[0][0] == 'F' || mapline_split[0][0] == 'C'))
-	{
+	{# include "../include/cub.h"
 		if (rgb_fill(map_info, mapline_split) == false)
 			return (false);
 	}

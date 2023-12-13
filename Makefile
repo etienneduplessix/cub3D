@@ -3,9 +3,8 @@ CFLAGS	=
 LIBMLX	= ./lib/MLX42
 LIBFT	= lib/libft
 LIBF	= lib/libft/libft.a
-HEADERS	= -I ./include -I $(LIBMLX)/include   -I $(LIBFT)/includes/libft.h
-LDFLAGS = -L /Users/etienneduplessix/.brew/Cellar/glfw/3.3.8/lib
-LIBS	= $(LIBMLX)/build/libmlx42.a -lglfw $(LDFLAGS) -ldl -lm -pthread 
+HEADERS = -I./include -I$(LIBMLX)/include -I$(LIBFT)/includes
+LIBS	= $(LIBMLX)/build/libmlx42.a -lglfw  -ldl -lm -pthread 
 SRCS	= $(shell find ./src -iname "*.c")
 OBJS_DIR= OBJS 
 OBJS	= ${SRCS:.c=.o}

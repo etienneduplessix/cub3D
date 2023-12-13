@@ -3,7 +3,6 @@
 # define CUB_H
 
 
-
 # define SCREEN_WIDTH 1920
 # define SCREEN_HEIGHT 1080
 
@@ -20,18 +19,18 @@
 # define PLAYER_COLOR 0xFF0FF0FF
 
 # include <stdlib.h>
-# include "map_parsing.h" 
 # include <math.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <fcntl.h>
 # include <memory.h>
+# include "map_parsing.h"
 # include "../lib/libft/includes/libft.h"
 # include "../lib/libft/includes/get_next_line.h"
 # include "../lib/libft/includes/ft_printf.h"
 # include "../lib/MLX42/include/MLX42/MLX42.h"
 
-//vector 
+
 typedef struct s_vector_d
 {
 	double	x;
@@ -81,6 +80,7 @@ typedef struct s_texture_draw
 	double		texture_pos;
 }	t_texture_draw;
 
+
 typedef struct s_raycast
 {
 	t_vector_d	ray_dir;
@@ -106,8 +106,7 @@ typedef struct s_matrix
 }	t_matrix;
 
 
-int		load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
-			t_map_data *data);
+int		load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],t_map_data *data);
 
 void	calculate_rays(t_game *game);
 

@@ -1,5 +1,4 @@
 
-
 #ifndef MAP_PARSING_H
 # define MAP_PARSING_H
 
@@ -11,6 +10,7 @@
 # include <fcntl.h>
 # include <stdint.h>
 # include <stdbool.h>
+
 
 typedef struct s_map_data
 {
@@ -27,6 +27,7 @@ typedef struct s_map_data
 	int				map_index;
 	char			**map;
 }	t_map_data;
+
 
 typedef struct s_parse
 {
@@ -57,6 +58,7 @@ typedef struct s_mapInfo
 
 
 
+void	free_map_data(t_map_data *data);
 void		map_info_free(t_mapInfo *map_info);
 bool		ft_error(t_mapInfo *map_info, char *error_msg);
 t_mapInfo	*map_info_init(void);
@@ -74,4 +76,5 @@ t_mapInfo	*get_map(char *map_path); //THE ACTUAL MAIN FUNCTION
 
 bool			is_map_line(char *map_line);
 bool			process_map_arr(char *map_line, t_mapInfo *map_info, int map_fd);
+
 #endif

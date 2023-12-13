@@ -1,6 +1,6 @@
 
-#include "map_parsing.h"
-# include "cub.h"
+
+# include "../../include/cub.h"
 
 static void	hook(void *param)
 {
@@ -41,11 +41,26 @@ void	ft_free_texture(t_map_data *data)
 	free(data->west_txt);
 }
 
+void help_mapp(int ac, char **av)
+{
+	char		*map_path;
+	t_mapInfo	*map_info;
+
+	map_path = "./map.cub";
+	map_info = NULL;
+	if (argc > 1)
+		map_path = argv[1];
+	map_info = get_map(map_path);
+	if (!map_info)
+		return (1);
+	map_info_free(map_info);	
+}
 int	main(int ac, char **av)
 {
 	t_game	game;
 
-	map_parsing(ac, av, &game);
+
+	help_mapp(ac,av);
 	load_textures(game.textures_pxls, &game.data);
 	game.mlx = mlx_init(SCREEN_WIDTH, SCREEN_HEIGHT, "cub3d", false);
 	if (!game.mlx)
