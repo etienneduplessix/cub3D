@@ -1,0 +1,6 @@
+{
+      "files.associations": {
+            "map_parsing.h": "c",
+            "init.C": "cpp"
+      }
+}
