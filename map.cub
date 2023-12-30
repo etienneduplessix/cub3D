@@ -1,12 +1,12 @@
-NO                     ./textures/beton.png
+NO                      ./textures/vinil.png
 
 C                    2,2,200
 
-SO ./textures/sky.png
+SO ./textures/vinil.png
 
-WE     ./textures/sky.png
+WE     ./textures/vinil.png
 
-EA                ./textures/beton.png   
+EA                   ./textures/vinil.png
 
 F           220,100,0
 

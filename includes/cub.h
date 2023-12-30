@@ -16,6 +16,7 @@
 # include "constants.h"
 # include "game_struct.h"
 # include "parsing.h"
+# include "minimap.h"
 # include "matrix.h"
 # include "vector.h"
 # include <stdlib.h>
@@ -31,7 +32,7 @@
 
 int		load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
 			t_map_data *data);
-
+void	draw_minimap(void);
 void	calculate_rays(t_game *game);
 void ft_free_arr(void **data) ;
 void	update_player_pos(t_player *player, int key);
