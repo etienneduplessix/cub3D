@@ -6,18 +6,11 @@
 /*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 12:29:04 by alouis-j          #+#    #+#             */
-/*   Updated: 2023/12/20 11:09:28 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/01/01 16:59:22 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-     #include "../includes/cub.h"  
-
-static int		load_file(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
-					char *txt_file);
-static void		fill_array(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
-					uint32_t *pixels_raw, uint32_t width, uint32_t height);
-static uint32_t	switch_color_bytes(uint32_t bad);
+# include "../include/cub.h"
 
 int	load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
 		t_map_data *data)

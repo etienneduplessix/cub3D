@@ -6,11 +6,14 @@
 /*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 11:16:41 by alouis-j          #+#    #+#             */
-/*   Updated: 2023/12/21 14:22:06 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/01/01 16:59:25 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-     #include "../includes/cub.h"  
+# include "../include/cub.h"
+
+void			draw_minimap(t_game *game);
+void			draw_square(t_game *game, int x, int y, int color);
 
 static void	hook(void *param)
 {
@@ -20,37 +23,22 @@ static void	hook(void *param)
 	if (mlx_is_key_down(game->mlx, MLX_KEY_ESCAPE))
 		mlx_close_window(game->mlx);
 	if (mlx_is_key_down(game->mlx, MLX_KEY_W))
-		update_player_pos(&game->player, MLX_KEY_W);
+		update_player_pos(&game->player, MLX_KEY_W, game->data.map);
 	if (mlx_is_key_down(game->mlx, MLX_KEY_S))
-		update_player_pos(&game->player, MLX_KEY_S);
+		update_player_pos(&game->player, MLX_KEY_S, game->data.map);
 	if (mlx_is_key_down(game->mlx, MLX_KEY_A))
-		update_player_pos(&game->player, MLX_KEY_A);
+		update_player_pos(&game->player, MLX_KEY_A, game->data.map);
 	if (mlx_is_key_down(game->mlx, MLX_KEY_D))
-		update_player_pos(&game->player, MLX_KEY_D);
+		update_player_pos(&game->player, MLX_KEY_D, game ->data.map);
 	if (mlx_is_key_down(game->mlx, MLX_KEY_LEFT))
 		rotate_player(&game->player, -0.2);
 	if (mlx_is_key_down(game->mlx, MLX_KEY_RIGHT))
 		rotate_player(&game->player, 0.2);
+	mouse_rotation(game->mlx, &game->player);
 	calculate_rays(game);
-}
-int get_array_height(void **data) {
-    int height = 0;
-    while (data[height] != NULL) {
-        height++;
-    }
-    return height;
-}
-
-void ft_free_arr(void **data) 
-{
-    int height = get_array_height(data);
-    int i;
-
-    for (i = 0; i < height; i++) {
-        free(data[i]); // Corrected syntax
-    }
-
-    free(data);
+	draw_minimap(game);
+	draw_square(game, game->player.pos.y * 5, \
+	game->player.pos.x * 5, 0xFF000090);
 }
 
 void	free_map_data(t_map_data *data)
@@ -76,7 +64,7 @@ int	main(int ac, char **av)
 
 	map_parsing(ac, av, &game);
 	load_textures(game.textures_pxls, &game.data);
-	game.mlx = mlx_init(SCREEN_WIDTH, SCREEN_HEIGHT, "cub3d", false);
+	game.mlx = mlx_init(SCREEN_WIDTH, SCREEN_HEIGHT, "cub3d_bonus", false);
 	if (!game.mlx)
 	{
 		free_map_data(&game.data);

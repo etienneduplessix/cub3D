@@ -6,15 +6,12 @@
 /*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 12:27:19 by alouis-j          #+#    #+#             */
-/*   Updated: 2023/12/20 11:05:27 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/01/01 16:59:50 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-     #include "../includes/cub.h"  
+# include "../include/cub.h"
 
-static t_txt_side	get_texture_side(t_vector_i *step, int *side);
-static void			draw_texture(int x, t_raycast *raycast, t_game *game,
-						int side);
 
 void	draw_line(int x, t_raycast *raycast, t_game *game)
 {

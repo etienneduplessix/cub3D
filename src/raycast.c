@@ -6,11 +6,11 @@
 /*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 10:12:53 by alouis-j          #+#    #+#             */
-/*   Updated: 2023/12/20 11:05:27 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/01/01 16:59:37 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-     #include "../includes/cub.h"  
+# include "../include/cub.h"
 
 static void		init_delta_dist(t_vector_d *delta_dist, t_vector_d *ray_dir);
 static void		init_loop(t_raycast *raycast, t_vector_d *player_pos);
