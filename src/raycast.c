@@ -1,21 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   raycast.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 10:12:53 by alouis-j          #+#    #+#             */
-/*   Updated: 2024/01/01 16:59:37 by etiennedupl      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 # include "../include/cub.h"
 
 static void		init_delta_dist(t_vector_d *delta_dist, t_vector_d *ray_dir);
 static void		init_loop(t_raycast *raycast, t_vector_d *player_pos);
 static double	get_wall_dist(t_raycast *raycast, t_map_data *map_data);
-
 void			draw_line(int x, t_raycast *raycast, t_game *game);
 
 void	calculate_rays(t_game *game)

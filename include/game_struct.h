@@ -2,19 +2,15 @@
 #ifndef GAME_STRUCT_H
 # define GAME_STRUCT_H
 
-# include <cub.h>
+# include "cub.h"
+# include "vector.h"
+# include "constants.h"
+# include "parsing.h"
+# include "minimap.h"
+# include "matrix.h"
+# include "vector.h"
+# include <stdint.h>
 
-typedef enum e_bg_color{
-	CLR_TOP,
-	CLR_BOT,
-}	t_bg_color;
-
-typedef enum e_txt_side{
-	TXT_NORTH,
-	TXT_SOUTH,
-	TXT_WEST,
-	TXT_EAST
-}	t_txt_side;
 
 typedef struct s_player
 {
@@ -31,7 +27,20 @@ typedef struct s_game
 	mlx_image_t	*img;
 	uint32_t	textures_pxls[4][TEXTURE_HEIGHT][TEXTURE_WIDTH];
 	uint32_t	bg_colors[2];
-}	t_game;
+}     t_game;
+
+typedef enum e_bg_color{
+	CLR_TOP,
+	CLR_BOT,
+}	t_bg_color;
+
+typedef enum e_txt_side{
+	TXT_NORTH,
+	TXT_SOUTH,
+	TXT_WEST,
+	TXT_EAST
+}	t_txt_side;
+
 
 typedef struct s_texture_draw
 {
@@ -55,5 +64,10 @@ typedef struct s_raycast
 	int			draw_start;
 	int			draw_end;
 }	t_raycast;
+
+
+
+void			draw_minimap(t_game *game);
+void			draw_square(t_game *game, int x, int y, int color);
 
 #endif

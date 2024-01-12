@@ -1,6 +1,8 @@
 {
       "files.associations": {
             "map_parsing.h": "c",
-            "init.C": "cpp"
+            "init.C": "cpp",
+            "game_struct.h": "c",
+            "cub.h": "c"
       }
 }

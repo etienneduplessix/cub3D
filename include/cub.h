@@ -2,8 +2,9 @@
 #ifndef  CUB_H
 # define CUB_H
 
-# include "constants.h"
+# include "../lib/MLX42/include/MLX42/MLX42.h"
 # include "game_struct.h"
+# include "constants.h"
 # include "parsing.h"
 # include "minimap.h"
 # include "matrix.h"
@@ -18,13 +19,13 @@
 # include "../lib/libft/includes/libft.h"
 # include "../lib/libft/includes/get_next_line.h"
 # include "../lib/libft/includes/ft_printf.h"
-# include "../lib/MLX42/include/MLX42/MLX42.h"
+
 
 int		load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
 			t_map_data *data);
-
+int get_array_height(void **data);
 void	calculate_rays(t_game *game);
-
+void ft_free_arr(void **data) ;
 void	update_player_pos(t_player *player, int key, char **map);
 void	rotate_player(t_player *player, double angle);
 void	mouse_rotation(mlx_t *mlx, t_player *player);

@@ -1,16 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   player_motions.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/22 15:37:02 by alouis-j          #+#    #+#             */
-/*   Updated: 2024/01/01 16:59:34 by etiennedupl      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-
 
 # include "../include/cub.h"
 
@@ -43,6 +30,7 @@ static void	check_collisions(t_vector_d *player_pos, double new_pos_x,
 	if (map[(int)player_pos->x][(int)new_pos_y] != '1')
 		player_pos->y = new_pos_y;
 }
+
 
 void	update_player_pos(t_player *player, int key, char **map)
 {

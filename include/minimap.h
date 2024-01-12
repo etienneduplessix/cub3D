@@ -1,10 +1,17 @@
 
-#ifndef MINIMAP_H  // Header guard to prevent multiple inclusion
+#ifndef MINIMAP_H  
 # define MINIMAP_H
 
-# include <cub.h>
+# include "cub.h"
+# include "vector.h"
+# include "constants.h"
+# include "parsing.h"
+# include "matrix.h"
+# include "vector.h"
+# include <stdint.h>
+# include "game_struct.h"
 
-void			draw_minimap(t_game *game);
-void			draw_square(t_game *game, int x, int y, int color);
+
+
 
 #endif

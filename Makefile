@@ -19,7 +19,7 @@ libmlx:
 	@$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS) && printf "Compiling: $(notdir $<)"
 
 $(NAME): $(OBJS)
-	@make -C $(LIBFT)/W/
+	@make -C $(LIBFT)
 	@$(CC) $(OBJS) $(LIBS) $(LIBF) $(HEADERS) -o $(NAME)
 
 clean:

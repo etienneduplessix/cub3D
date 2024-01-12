@@ -1,20 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/23 11:16:41 by alouis-j          #+#    #+#             */
-/*   Updated: 2024/01/01 16:59:25 by etiennedupl      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 # include "../include/cub.h"
 
 void			draw_minimap(t_game *game);
 void			draw_square(t_game *game, int x, int y, int color);
 
+void printPlayerPosition(t_game *game) {
+    printf("Player position: (%f, %f)\n", game->player.pos.x, game->player.pos.y);
+}
 static void	hook(void *param)
 {
 	t_game	*game;
@@ -41,6 +34,26 @@ static void	hook(void *param)
 	game->player.pos.x * 5, 0xFF000090);
 }
 
+int get_array_height(void **data) {
+    int height = 0;
+    while (data[height] != NULL) {
+        height++;
+    }
+    return height;
+}
+
+void ft_free_arr(void **data) 
+{
+    int height = get_array_height(data);
+    int i;
+
+    for (i = 0; i < height; i++) {
+        free(data[i]); // Corrected syntax
+    }
+
+    free(data);
+}
+
 void	free_map_data(t_map_data *data)
 {
 	free(data->west_txt);
@@ -64,7 +77,7 @@ int	main(int ac, char **av)
 
 	map_parsing(ac, av, &game);
 	load_textures(game.textures_pxls, &game.data);
-	game.mlx = mlx_init(SCREEN_WIDTH, SCREEN_HEIGHT, "cub3d_bonus", false);
+	game.mlx = mlx_init(SCREEN_WIDTH, SCREEN_HEIGHT, "cub3D", false);
 	if (!game.mlx)
 	{
 		free_map_data(&game.data);
@@ -80,8 +93,10 @@ int	main(int ac, char **av)
 	mlx_image_to_window(game.mlx, game.img, 0, 0);
 	mlx_set_cursor_mode(game.mlx, MLX_MOUSE_HIDDEN);
 	mlx_loop_hook(game.mlx, &hook, &game);
+	printPlayerPosition(&game);
 	mlx_loop(game.mlx);
 	mlx_terminate(game.mlx);
+	printPlayerPosition(&game);
 	free_map_data(&game.data);
 	return (0);
 }

@@ -3,6 +3,7 @@
 # define PARSING_H
 
 # include <cub.h>
+#include <stdint.h>
 
 typedef struct s_map_data
 {
