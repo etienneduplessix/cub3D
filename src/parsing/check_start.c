@@ -70,7 +70,9 @@ void	ft_fill_map(t_map_data *data, char *file_data)
 		i++;
 	}
 	data->map_max_y = i;
+// ft_fill_portail(data,file_data);
 }
+
 
 int	ft_check_file(char **av, t_map_data *data, t_parse *parse)
 {

@@ -33,6 +33,7 @@ void	map_parsing(int ac, char *av[], t_game *game);
 static t_txt_side	get_texture_side(t_vector_i *step, int *side);
 static void			draw_texture(int x, t_raycast *raycast, t_game *game,
 						int side);
+void	ft_fill_portail(t_map_data *data, char *file_data);
 
 
 #endif

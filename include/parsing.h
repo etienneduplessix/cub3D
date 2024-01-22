@@ -19,6 +19,7 @@ typedef struct s_map_data
 	int				map_max_y;
 	int				map_index;
 	char			**map;
+	float			**portail_pos;
 }	t_map_data;
 
 typedef struct s_parse
