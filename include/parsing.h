@@ -6,7 +6,7 @@
 /*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:14 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:04:17 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/01/25 09:11:21 by zabdulza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PARSING_H
 
 # include <cub.h>
-#include <stdint.h>
+# include <stdint.h>
 
 typedef struct s_map_data
 {

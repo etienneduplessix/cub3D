@@ -6,16 +6,16 @@
 /*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:39 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:42 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/01/25 09:22:05 by zabdulza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/cub.h"
+#include "../include/cub.h"
 
 void			draw_minimap(t_game *game);
 void			draw_square(t_game *game, int x, int y, int color);
 
-void printPlayerPosition(t_game *game) {
+void	printPlayerPosition(t_game *game) {
     printf("Player position: (%f, %f)\n", game->player.pos.x, game->player.pos.y);
 }
 static void	hook(void *param)

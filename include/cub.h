@@ -6,7 +6,7 @@
 /*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:03:44 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:03:47 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/01/25 09:21:45 by zabdulza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,20 +31,18 @@
 # include "../lib/libft/includes/get_next_line.h"
 # include "../lib/libft/includes/ft_printf.h"
 
-
 int		load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
 			t_map_data *data);
-int get_array_height(void **data);
+int		get_array_height(void **data);
 void	calculate_rays(t_game *game);
-void ft_free_arr(void **data) ;
+void	ft_free_arr(void **data);
 void	update_player_pos(t_player *player, int key, char **map);
 void	rotate_player(t_player *player, double angle);
 void	mouse_rotation(mlx_t *mlx, t_player *player);
 void	map_parsing(int ac, char *av[], t_game *game);
-static t_txt_side	get_texture_side(t_vector_i *step, int *side);
+static	t_txt_side	get_texture_side(t_vector_i *step, int *side);
 static void			draw_texture(int x, t_raycast *raycast, t_game *game,
 						int side);
 void	ft_fill_portail(t_map_data *data, char *file_data);
-
 
 #endif
