@@ -1,12 +1,12 @@
-NO                      ./textures/vinil.png
+NO                      ./textures/wall1.png
 
 C                    2,2,200
 
-SO ./textures/vinil.png
+SO ./textures/wall2.png
 
-WE     ./textures/vinil.png
+WE     ./textures/wall3.png
 
-EA                   ./textures/vinil.png
+EA                   ./textures/wall4.png
 
 F           220,100,0
 
