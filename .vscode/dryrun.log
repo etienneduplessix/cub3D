@@ -1,0 +1,25 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/zero/cube3s'
+ 
+cmake ./lib/MLX42 -B ./lib/MLX42/build && make -C ./lib/MLX42/build -j4
+cc  -o src/main.o -c src/main.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: main.c"
+cc  -o src/load_textures.o -c src/load_textures.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: load_textures.c"
+cc  -o src/tele.o -c src/tele.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: tele.c"
+cc  -o src/raycast.o -c src/raycast.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: raycast.c"
+cc  -o src/minimap.o -c src/minimap.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: minimap.c"
+cc  -o src/textures.o -c src/textures.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: textures.c"
+cc  -o src/player_motions.o -c src/player_motions.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: player_motions.c"
+cc  -o src/parsing/manage_loops.o -c src/parsing/manage_loops.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: manage_loops.c"
+cc  -o src/parsing/manage_ceil_floor.o -c src/parsing/manage_ceil_floor.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: manage_ceil_floor.c"
+cc  -o src/parsing/fill_map.o -c src/parsing/fill_map.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: fill_map.c"
+cc  -o src/parsing/check_map.o -c src/parsing/check_map.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: check_map.c"
+cc  -o src/parsing/check_start.o -c src/parsing/check_start.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: check_start.c"
+cc  -o src/parsing/manage_tele.o -c src/parsing/manage_tele.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: manage_tele.c"
+cc  -o src/parsing/check_file_data.o -c src/parsing/check_file_data.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: check_file_data.c"
+cc  -o src/parsing/init_parsing.o -c src/parsing/init_parsing.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: init_parsing.c"
+cc  -o src/parsing/manage_data.o -c src/parsing/manage_data.c -I./include -I./lib/MLX42/include -Ilib/libft/includes && printf "Compiling: manage_data.c"
+ 
+make -C lib/libft
+cc ./src/main.o ./src/load_textures.o ./src/tele.o ./src/raycast.o ./src/minimap.o ./src/textures.o ./src/player_motions.o ./src/parsing/manage_loops.o ./src/parsing/manage_ceil_floor.o ./src/parsing/fill_map.o ./src/parsing/check_map.o ./src/parsing/check_start.o ./src/parsing/manage_tele.o ./src/parsing/check_file_data.o ./src/parsing/init_parsing.o ./src/parsing/manage_data.o ./lib/MLX42/build/libmlx42.a -lglfw -L /Users/etienneduplessix/.brew/Cellar/glfw/3.3.8/lib -ldl -lm -pthread  lib/libft/libft.a -I./include -I./lib/MLX42/include -Ilib/libft/includes -o cub
+make: Leaving directory '/home/zero/cube3s'
+ 
