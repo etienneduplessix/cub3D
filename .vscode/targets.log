@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jan 25 09:03:36 2024
+# Make data base, printed on Thu Jan 25 09:07:58 2024
 
 # Variables
 
@@ -28,7 +28,7 @@ LC_NUMERIC = en_US.UTF-8
 VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
 # environment
 VSCODE_CWD = /home/zero/cube3s
-# makefile (from 'Makefile', line 8)
+# makefile (from 'Makefile', line 20)
 LIBS = $(LIBMLX)/build/libmlx42.a -lglfw $(LDFLAGS) -ldl -lm -pthread 
 # environment
 LC_ADDRESS = en_US.UTF-8
@@ -62,7 +62,7 @@ SNAP_EUID = 1000
 %F = $(notdir $%)
 # environment
 VSCODE_CODE_CACHE_PATH = /home/zero/.config/Code/CachedData/8b3775030ed1a69b13e4f4c628c612102e30a681
-# makefile (from 'Makefile', line 4)
+# makefile (from 'Makefile', line 16)
 LIBFT = lib/libft
 # environment
 LANG = C
@@ -84,7 +84,7 @@ CURDIR := /home/zero/cube3s
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
-# makefile (from 'Makefile', line 9)
+# makefile (from 'Makefile', line 21)
 SRCS = $(shell find ./src -iname "*.c")
 # environment
 VSCODE_L10N_BUNDLE_LOCATION = 
@@ -128,7 +128,7 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus,guid=3c27d78984d41ed8ef5
 VSCODE_NLS_CONFIG = {"locale":"en-us","osLocale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
-# makefile (from 'Makefile', line 11)
+# makefile (from 'Makefile', line 23)
 OBJS = ${SRCS:.c=.o}
 # environment
 GTK_PATH = /snap/code/149/usr/lib/x86_64-linux-gnu/gtk-3.0
@@ -140,7 +140,7 @@ SHELL = /bin/sh
 MAKECMDGOALS := all
 # environment
 XMODIFIERS = @im=ibus
-# makefile (from 'Makefile', line 6)
+# makefile (from 'Makefile', line 18)
 HEADERS = -I./include -I$(LIBMLX)/include -I$(LIBFT)/includes
 # environment
 SHLVL = 1
@@ -174,7 +174,7 @@ SNAP_REAL_HOME = /home/zero
 USERNAME = zero
 # environment
 GNOME_SETUP_DISPLAY = :1
-# makefile (from 'Makefile', line 3)
+# makefile (from 'Makefile', line 15)
 LIBMLX = ./lib/MLX42
 # environment
 LC_TELEPHONE = en_US.UTF-8
@@ -184,7 +184,7 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 ?F = $(notdir $?)
 # environment
 GTK_IM_MODULE_FILE = /home/zero/snap/code/common/.cache/immodules/immodules.cache
-# makefile (from 'Makefile', line 1)
+# makefile (from 'Makefile', line 13)
 NAME = cub
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -224,19 +224,19 @@ MAKE_VERSION := 4.3
 SNAP_DATA = /var/snap/code/149
 # environment
 SNAP_CONTEXT = VfRZqmyEJLSxBhsP30W0o6paaMTXspnvSwl7St_Jxa4h-Vv_4O-C
-# makefile (from 'Makefile', line 7)
+# makefile (from 'Makefile', line 19)
 LDFLAGS = -L /Users/etienneduplessix/.brew/Cellar/glfw/3.3.8/lib
 # environment
 DBUS_STARTER_BUS_TYPE = session
 # environment
 LC_MEASUREMENT = en_US.UTF-8
-# makefile (from 'Makefile', line 10)
+# makefile (from 'Makefile', line 22)
 OBJS_DIR = OBJS
 # environment
 LC_PAPER = en_US.UTF-8
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
-# makefile (from 'Makefile', line 2)
+# makefile (from 'Makefile', line 14)
 CFLAGS = 
 # environment
 SNAP_UID = 1000
@@ -246,7 +246,7 @@ COLORTERM = truecolor
 XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG = /etc/xdg/xdg-ubuntu:/etc/xdg
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/zero/snap/code/common/.cache/gdk-pixbuf-loaders.cache
-# makefile (from 'Makefile', line 5)
+# makefile (from 'Makefile', line 17)
 LIBF = lib/libft/libft.a
 # environment
 GIO_MODULE_DIR = /home/zero/snap/code/common/.cache/gio-modules
@@ -319,7 +319,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Implicit Rules
 
 %.o: %.c
-#  recipe to execute (from 'Makefile', line 19):
+#  recipe to execute (from 'Makefile', line 31):
 	@$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS) && printf "Compiling: $(notdir $<)"
 
 # 1 implicit rules, 0 (0.0%) terminal.
@@ -358,7 +358,7 @@ src/tele.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2024-01-25 09:02:53.003544672
+#  Last modified 2024-01-25 09:07:25.261032513
 #  File has been updated.
 #  Successfully updated.
 
@@ -372,7 +372,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 26):
+#  recipe to execute (from 'Makefile', line 38):
 	@rm -rf $(LIBF)
 	@rm -rf $(OBJS)
 	@rm -rf $(LIBMLX)/build
@@ -419,7 +419,7 @@ libmlx:
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'Makefile', line 16):
+#  recipe to execute (from 'Makefile', line 28):
 	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
 
 # Not a target:
@@ -459,7 +459,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 31):
+#  recipe to execute (from 'Makefile', line 43):
 	@make -C $(LIBFT) fclean
 	@rm -rf $(NAME)
 
@@ -485,7 +485,7 @@ cub: src/main.o src/load_textures.o src/tele.o src/raycast.o src/minimap.o src/t
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 22):
+#  recipe to execute (from 'Makefile', line 34):
 	@make -C $(LIBFT)
 	@$(CC) $(OBJS) $(LIBS) $(LIBF) $(HEADERS) -o $(NAME)
 
@@ -550,6 +550,6 @@ fclean,:
 # strcache performance: lookups = 65 / hit rate = 30%
 # hash-table stats:
 # Load=45/8192=1%, Rehash=0, Collisions=0/65=0%
-# Finished Make data base on Thu Jan 25 09:03:36 2024
+# Finished Make data base on Thu Jan 25 09:07:58 2024
 
  
