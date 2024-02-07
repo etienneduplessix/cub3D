@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   constants.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:03:37 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:03:40 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 14:50:38 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONSTANTS_H
 # define CONSTANTS_H
 
-# include <cub.h>
+# include "cub.h"
 
 # define SCREEN_WIDTH 1920
 # define SCREEN_HEIGHT 1080

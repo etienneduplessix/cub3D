@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:03:44 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:21:45 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:02:21 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ void	update_player_pos(t_player *player, int key, char **map);
 void	rotate_player(t_player *player, double angle);
 void	mouse_rotation(mlx_t *mlx, t_player *player);
 void	map_parsing(int ac, char *av[], t_game *game);
-static	t_txt_side	get_texture_side(t_vector_i *step, int *side);
-static void			draw_texture(int x, t_raycast *raycast, t_game *game,
-						int side);
 void	ft_fill_portail(t_map_data *data, char *file_data);
 
 #endif

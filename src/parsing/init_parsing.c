@@ -3,39 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_parsing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:13 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:15 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:08:08 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../../include/cub.h"
-
-void	map_parsing(int ac, char *av[], t_game *game)
-{
-	t_parse	parse;
-
-	ft_init_parse(&parse);
-	ft_init_data(&game->data);
-	ft_start(ac, av, &game->data, &parse);
-	game->bg_colors[CLR_BOT] = game->data.floor_color[0] << 24
-		| game->data.floor_color[1] << 16
-		| game->data.floor_color[2] << 8
-		| 0xff;
-	game->bg_colors[CLR_TOP] = game->data.ceil_color[0] << 24
-		| game->data.ceil_color[1] << 16
-		| game->data.ceil_color[2] << 8
-		| 0xff;
-	game->player.pos.x = game->data.pos_player_y + 0.5;
-	game->player.pos.y = game->data.pos_player_x + 0.5;
-	game->player.dir.x = 0;
-	game->player.dir.y = 0;
-	game->player.plane.x = 0;
-	game->player.plane.y = 0;
-	initial_player_direction(get_init_player_dir(game->data.map),
-		&game->player.dir, &game->player.plane);
-}
 
 static void	ft_init_parse(t_parse *parse)
 {
@@ -94,3 +69,34 @@ static char	get_init_player_dir(char **map)
 	}
 	return (-1);
 }
+
+void	map_parsing(int ac, char *av[], t_game *game)
+{
+	t_parse	parse;
+
+	ft_init_parse(&parse);
+	ft_init_data(&game->data);
+	ft_start(ac, av, &game->data, &parse);
+	game->bg_colors[CLR_BOT] = game->data.floor_color[0] << 24
+		| game->data.floor_color[1] << 16
+		| game->data.floor_color[2] << 8
+		| 0xff;
+	game->bg_colors[CLR_TOP] = game->data.ceil_color[0] << 24
+		| game->data.ceil_color[1] << 16
+		| game->data.ceil_color[2] << 8
+		| 0xff;
+	game->player.pos.x = game->data.pos_player_y + 0.5;
+	game->player.pos.y = game->data.pos_player_x + 0.5;
+	game->player.dir.x = 0;
+	game->player.dir.y = 0;
+	game->player.plane.x = 0;
+	game->player.plane.y = 0;
+	initial_player_direction(get_init_player_dir(game->data.map),
+		&game->player.dir, &game->player.plane);
+}
+
+
+
+
+
+

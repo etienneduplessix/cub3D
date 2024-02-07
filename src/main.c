@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:39 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:22:05 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 14:30:24 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	hook(void *param)
 		rotate_player(&game->player, 0.2);
 	mouse_rotation(game->mlx, &game->player);
 	calculate_rays(game);
-	draw_minimap(game);
+	 draw_minimap(game);
 	draw_square(game, game->player.pos.y * 5, \
 	game->player.pos.x * 5, 0xFF000090);
 }

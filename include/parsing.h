@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:14 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:11:21 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:01:43 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PARSING_H
 # define PARSING_H
 
-# include <cub.h>
+# include "cub.h"
 # include <stdint.h>
 
 typedef struct s_map_data
@@ -77,12 +77,7 @@ int		ft_manage_south_loop(t_map_data *data, char *file_data, int i,
 			int length);
 int		ft_manage_east_loop(t_map_data *data, char *file_data, int i,
 			int length);
-//color
-static int		load_file(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
-					char *txt_file);
-static void		fill_array(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
-					uint32_t *pixels_raw, uint32_t width, uint32_t height);
-static uint32_t	switch_color_bytes(uint32_t bad);
+
 //check_map.c
 int		ft_check_map(t_map_data *data, char *file_data);
 
@@ -101,9 +96,6 @@ int		ft_check_valid_char(char *file_data, int i);
 char	**ft_add_border(int max_w, int max_l, char **map);
 char	**ft_fill_middle(char *file, char **map, t_map_data *data);
 char	*ft_get_file(char *arg);
-static char	get_init_player_dir(char **map);
-static void	ft_init_parse(t_parse *parse);
-static void	initial_player_direction(char dir, t_vector_d *player_dir,
-				t_vector_d *player_plane);
+
 
 #endif

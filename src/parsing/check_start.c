@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_start.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:59 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:04 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:10:14 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	ft_fill_map(t_map_data *data, char *file_data)
 	data->map_max_x = ft_strlen(data->map[i]);
 	while (data->map[i])
 	{
-		if (ft_strlen(data->map[i]) > data->map_max_x)
+		if ( (int)ft_strlen(data->map[i]) > data->map_max_x)
 			data->map_max_x = ft_strlen(data->map[i]);
 		while (data->map[i][j])
 		{
@@ -80,7 +80,6 @@ void	ft_fill_map(t_map_data *data, char *file_data)
 		i++;
 	}
 	data->map_max_y = i;
-// ft_fill_portail(data,file_data);
 }
 
 

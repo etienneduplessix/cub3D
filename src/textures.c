@@ -3,38 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   textures.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:06:06 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:06:08 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:04:26 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/cub.h"
 
 
-void	draw_line(int x, t_raycast *raycast, t_game *game)
+static t_txt_side	get_texture_side(t_vector_i *step, int *side)
 {
-	int	y;
-	int	txt_side;
-
-	y = 0;
-	if (raycast->draw_start >= SCREEN_HEIGHT || raycast->draw_end < 0)
-		return ;
-	txt_side = get_texture_side(&raycast->step, &raycast->side);
-	while (y < raycast->draw_start)
-	{
-		mlx_put_pixel(game->img, x, y, game->bg_colors[CLR_TOP]);
-		y++;
-	}
-	draw_texture(x, raycast, game, txt_side);
-	y = raycast->draw_end;
-	while ((uint32_t)y < SCREEN_HEIGHT)
-	{
-		mlx_put_pixel(game->img, x, y, game->bg_colors[CLR_BOT]);
-		y++;
-	}
+	if (*side == 0 && step->x < 0)
+		return (TXT_NORTH);
+	if (*side == 0 && step->x > 0)
+		return (TXT_SOUTH);
+	if (*side == 1 && step->y < 0)
+		return (TXT_EAST);
+	if (*side == 1 && step->y > 0)
+		return (TXT_WEST);
+	return (0);
 }
+
+
 
 static void	draw_texture(int x, t_raycast *rc, t_game *game, int side)
 {
@@ -65,15 +57,25 @@ static void	draw_texture(int x, t_raycast *rc, t_game *game, int side)
 	}
 }
 
-static t_txt_side	get_texture_side(t_vector_i *step, int *side)
+void	draw_line(int x, t_raycast *raycast, t_game *game)
 {
-	if (*side == 0 && step->x < 0)
-		return (TXT_NORTH);
-	if (*side == 0 && step->x > 0)
-		return (TXT_SOUTH);
-	if (*side == 1 && step->y < 0)
-		return (TXT_EAST);
-	if (*side == 1 && step->y > 0)
-		return (TXT_WEST);
-	return (0);
+	int	y;
+	int	txt_side;
+
+	y = 0;
+	if (raycast->draw_start >= SCREEN_HEIGHT || raycast->draw_end < 0)
+		return ;
+	txt_side = get_texture_side(&raycast->step, &raycast->side);
+	while (y < raycast->draw_start)
+	{
+		mlx_put_pixel(game->img, x, y, game->bg_colors[CLR_TOP]);
+		y++;
+	}
+	draw_texture(x, raycast, game, txt_side);
+	y = raycast->draw_end;
+	while ((uint32_t)y < SCREEN_HEIGHT)
+	{
+		mlx_put_pixel(game->img, x, y, game->bg_colors[CLR_BOT]);
+		y++;
+	}
 }

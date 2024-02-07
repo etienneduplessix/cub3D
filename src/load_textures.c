@@ -3,40 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   load_textures.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:35 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:37 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:03:33 by etiennedupl      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/cub.h"
 
-int	load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
-		t_map_data *data)
+
+
+
+
+static uint32_t	switch_color_bytes(uint32_t bad)
 {
-	if (load_file(textures[TXT_NORTH], data->north_txt))
-	{
-		free_map_data(data);
-		exit(1);
-	}
-	if (load_file(textures[TXT_SOUTH], data->south_txt))
-	{
-		free_map_data(data);
-		exit(1);
-	}
-	if (load_file(textures[TXT_EAST], data->east_txt))
-	{
-		free_map_data(data);
-		exit(1);
-	}
-	if (load_file(textures[TXT_WEST], data->west_txt))
-	{
-		free_map_data(data);
-		exit(1);
-	}
-	return (0);
+	uint32_t	good;
+
+	good = ((bad & 0xff) << 24) | (((bad >> 8) & 0xff) << 16)
+		| (((bad >> 16) & 0xff) << 8) | bad >> 24;
+	return (good);
 }
+static void	fill_array(uint32_t pixel_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
+						uint32_t *pixels_raw, uint32_t width, uint32_t height)
+{
+	uint32_t	i;
+	uint32_t	j;
+	uint32_t	color;
+
+	i = 0;
+	while (i < height)
+	{
+		j = 0;
+		while (j < width)
+		{
+			color = switch_color_bytes(pixels_raw[i * width + j]);
+			pixel_arr[i][j] = color;
+			j++;
+		}
+		i++;
+	}
+}
+
 
 static int	load_file(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
 				char *txt_file)
@@ -65,32 +73,28 @@ static int	load_file(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
 	return (0);
 }
 
-static void	fill_array(uint32_t pixel_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
-						uint32_t *pixels_raw, uint32_t width, uint32_t height)
+int	load_textures(uint32_t textures[4][TEXTURE_HEIGHT][TEXTURE_WIDTH],
+		t_map_data *data)
 {
-	uint32_t	i;
-	uint32_t	j;
-	uint32_t	color;
-
-	i = 0;
-	while (i < height)
+	if (load_file(textures[TXT_NORTH], data->north_txt))
 	{
-		j = 0;
-		while (j < width)
-		{
-			color = switch_color_bytes(pixels_raw[i * width + j]);
-			pixel_arr[i][j] = color;
-			j++;
-		}
-		i++;
+		free_map_data(data);
+		exit(1);
 	}
-}
-
-static uint32_t	switch_color_bytes(uint32_t bad)
-{
-	uint32_t	good;
-
-	good = ((bad & 0xff) << 24) | (((bad >> 8) & 0xff) << 16)
-		| (((bad >> 16) & 0xff) << 8) | bad >> 24;
-	return (good);
+	if (load_file(textures[TXT_SOUTH], data->south_txt))
+	{
+		free_map_data(data);
+		exit(1);
+	}
+	if (load_file(textures[TXT_EAST], data->east_txt))
+	{
+		free_map_data(data);
+		exit(1);
+	}
+	if (load_file(textures[TXT_WEST], data->west_txt))
+	{
+		free_map_data(data);
+		exit(1);
+	}
+	return (0);
 }

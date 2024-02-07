@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+         #
+#    By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 09:07:22 by zabdulza          #+#    #+#              #
-#    Updated: 2024/01/25 09:07:25 by zabdulza         ###   ########.fr        #
+#    Updated: 2024/02/07 14:51:33 by etiennedupl      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = cub
-CFLAGS	=
+CFLAGS	= -Wall -Werror -Wextra 
 LIBMLX	= ./lib/MLX42
 LIBFT	= lib/libft
 LIBF	= lib/libft/libft.a
@@ -28,11 +28,11 @@ libmlx:
 	@cmake $(LIBMLX) -B $(LIBMLX)/build && make -C $(LIBMLX)/build -j4
 
 %.o: %.c
-	@$(CC) $(CFLAGS) -o $@ -c $< $(HEADERS) && printf "Compiling: $(notdir $<)"
+	@$(CC) $(CFLAGS) -o $@ -c $<  && printf "Compiling: $(notdir $<)"
 
 $(NAME): $(OBJS)
 	@make -C $(LIBFT)
-	@$(CC) $(OBJS) $(LIBS) $(LIBF) $(HEADERS) -o $(NAME)
+	@$(CC) $(OBJS) $(LIBS) $(LIBF)  -o $(NAME)
 
 clean:
 	@rm -rf $(LIBF)
