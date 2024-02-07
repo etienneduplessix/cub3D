@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   fill_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:08 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:10 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:40:07 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/cub.h"
+#include "../../include/cub.h"
 
 char	**ft_add_border(int max_w, int max_l, char **map)
 {
@@ -64,13 +64,10 @@ int	ft_check_valid_char(char *file_data, int i)
 	if (file_data[i] != '\n' && file_data[i] != 'N' && \
 		file_data[i] != 'S' && file_data[i] != 'E' && \
 		file_data[i] != 'W' && file_data[i] != ' ' && \
-		file_data[i] != '0' && file_data[i] != '1'&& \
-		file_data[i] != 'D' && file_data[i] != 'A' && \
-		file_data[i] != 'T' && file_data[i] != 'M')
+		file_data[i] != '0' && file_data[i] != '1')
 		return (1);
 	return (0);
 }
-
 
 char	*ft_get_file(char *arg)
 {

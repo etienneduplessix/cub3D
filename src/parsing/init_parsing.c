@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_parsing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:13 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:08:08 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/02/07 15:35:57 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/cub.h"
+#include "../../include/cub.h"
 
 static void	ft_init_parse(t_parse *parse)
 {
@@ -94,9 +94,3 @@ void	map_parsing(int ac, char *av[], t_game *game)
 	initial_player_direction(get_init_player_dir(game->data.map),
 		&game->player.dir, &game->player.plane);
 }
-
-
-
-
-
-

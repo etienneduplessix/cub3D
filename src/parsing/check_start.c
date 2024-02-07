@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_start.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:59 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:10:14 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/02/07 15:39:20 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/cub.h"
+#include "../../include/cub.h"
 
 int	ft_check_cub(char *av)
 {
@@ -64,7 +64,7 @@ void	ft_fill_map(t_map_data *data, char *file_data)
 	data->map_max_x = ft_strlen(data->map[i]);
 	while (data->map[i])
 	{
-		if ( (int)ft_strlen(data->map[i]) > data->map_max_x)
+		if ((int)ft_strlen(data->map[i]) > data->map_max_x)
 			data->map_max_x = ft_strlen(data->map[i]);
 		while (data->map[i][j])
 		{
@@ -81,7 +81,6 @@ void	ft_fill_map(t_map_data *data, char *file_data)
 	}
 	data->map_max_y = i;
 }
-
 
 int	ft_check_file(char **av, t_map_data *data, t_parse *parse)
 {

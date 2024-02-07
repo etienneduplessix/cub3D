@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:54 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:04:57 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:29:33 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/cub.h"
+#include "../../include/cub.h"
 
 int	ft_check_each_char_map(char **map)
 {

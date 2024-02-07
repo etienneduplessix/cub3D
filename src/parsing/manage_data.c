@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   manage_data.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:21 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:23 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:30:24 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/cub.h"
+#include "../../include/cub.h"
 
 void	ft_init_data(t_map_data *data)
 {

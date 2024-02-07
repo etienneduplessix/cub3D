@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:54 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:56 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:40:28 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/cub.h"
+#include "../include/cub.h"
 
 static void		init_delta_dist(t_vector_d *delta_dist, t_vector_d *ray_dir);
 static void		init_loop(t_raycast *raycast, t_vector_d *player_pos);

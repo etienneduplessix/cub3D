@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:14 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:01:43 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/02/07 15:32:59 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,5 @@ int		ft_check_valid_char(char *file_data, int i);
 char	**ft_add_border(int max_w, int max_l, char **map);
 char	**ft_fill_middle(char *file, char **map, t_map_data *data);
 char	*ft_get_file(char *arg);
-
 
 #endif

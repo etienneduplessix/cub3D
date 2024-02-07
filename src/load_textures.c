@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   load_textures.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:35 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:03:33 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/02/07 15:41:49 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/cub.h"
-
-
-
-
+#include "../include/cub.h"
 
 static uint32_t	switch_color_bytes(uint32_t bad)
 {
@@ -24,6 +20,7 @@ static uint32_t	switch_color_bytes(uint32_t bad)
 		| (((bad >> 16) & 0xff) << 8) | bad >> 24;
 	return (good);
 }
+
 static void	fill_array(uint32_t pixel_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
 						uint32_t *pixels_raw, uint32_t width, uint32_t height)
 {
@@ -44,7 +41,6 @@ static void	fill_array(uint32_t pixel_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
 		i++;
 	}
 }
-
 
 static int	load_file(uint32_t pixl_arr[TEXTURE_HEIGHT][TEXTURE_WIDTH],
 				char *txt_file)

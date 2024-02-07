@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   textures.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etienneduplessix <etienneduplessix@stud    +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:06:06 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:04:26 by etiennedupl      ###   ########.fr       */
+/*   Updated: 2024/02/07 15:40:54 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/cub.h"
-
+#include "../include/cub.h"
 
 static t_txt_side	get_texture_side(t_vector_i *step, int *side)
 {
@@ -25,8 +24,6 @@ static t_txt_side	get_texture_side(t_vector_i *step, int *side)
 		return (TXT_WEST);
 	return (0);
 }
-
-
 
 static void	draw_texture(int x, t_raycast *rc, t_game *game, int side)
 {

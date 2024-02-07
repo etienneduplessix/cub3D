@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check_file_data.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:49 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:04:52 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:30:02 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../../include/cub.h"
+#include "../../include/cub.h"
 
 int	ft_fill_first_data(t_map_data *data, char *file_data, int i, t_parse *parse)
 {

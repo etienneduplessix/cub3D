@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   player_motions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:48 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:05:51 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:46:01 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/cub.h"
+#include "../include/cub.h"
 
 static void	vector_rotate(t_matrix *rotation, t_vector_d *vector)
 {
@@ -41,7 +41,6 @@ static void	check_collisions(t_vector_d *player_pos, double new_pos_x,
 	if (map[(int)player_pos->x][(int)new_pos_y] != '1')
 		player_pos->y = new_pos_y;
 }
-
 
 void	update_player_pos(t_player *player, int key, char **map)
 {

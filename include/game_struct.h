@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game_struct.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zabdulza <zabdulza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:03:51 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/01/25 09:12:50 by zabdulza         ###   ########.fr       */
+/*   Updated: 2024/02/07 15:32:40 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "vector.h"
 # include "constants.h"
 # include "parsing.h"
-# include "minimap.h"
 # include "matrix.h"
 # include "vector.h"
 # include <stdint.h>
@@ -39,12 +38,14 @@ typedef struct s_game
 	uint32_t	bg_colors[2];
 }	t_game;
 
-typedef enum e_bg_color{
+typedef enum e_bg_color
+{
 	CLR_TOP,
 	CLR_BOT,
 }	t_bg_color;
 
-typedef enum e_txt_side{
+typedef enum e_txt_side
+{
 	TXT_NORTH,
 	TXT_SOUTH,
 	TXT_WEST,
@@ -73,8 +74,5 @@ typedef struct s_raycast
 	int			draw_start;
 	int			draw_end;
 }	t_raycast;
-
-void			draw_minimap(t_game *game);
-void			draw_square(t_game *game, int x, int y, int color);
 
 #endif
