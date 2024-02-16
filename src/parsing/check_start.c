@@ -6,7 +6,7 @@
 /*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:04:59 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:39:20 by edupless         ###   ########.fr       */
+/*   Updated: 2024/02/15 15:56:53 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_check_arg(int ac, char **av)
 
 	if (ac != 2 || !av[1][0])
 	{
-		dprintf(2, "Usage : ./cub3D map.cub\n");
+		dprintf(2, "Usage : ./cub map.cub\n");
 		exit(1);
 	}
 	ft_check_cub(av[1]);

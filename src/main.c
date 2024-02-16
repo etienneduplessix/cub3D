@@ -6,7 +6,7 @@
 /*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:39 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:49:00 by edupless         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:07:58 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,8 @@ int	main(int ac, char **av)
 {
 	t_game	game;
 
-	map_parsing(ac, av, &game);
+	if (map_parsing(ac, av, &game) == false)
+		exit (0);
 	load_textures(game.textures_pxls, &game.data);
 	game.mlx = mlx_init(SCREEN_WIDTH, SCREEN_HEIGHT, "cub3D", false);
 	if (!game.mlx)

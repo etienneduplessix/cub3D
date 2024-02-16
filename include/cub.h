@@ -6,7 +6,7 @@
 /*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:03:44 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:42:57 by edupless         ###   ########.fr       */
+/*   Updated: 2024/02/15 16:48:08 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		ft_free_arr(void **data);
 void		update_player_pos(t_player *player, int key, char **map);
 void		rotate_player(t_player *player, double angle);
 void		mouse_rotation(mlx_t *mlx, t_player *player);
-void		map_parsing(int ac, char *av[], t_game *game);
+bool		map_parsing(int ac, char *av[], t_game *game);
 void		ft_fill_portail(t_map_data *data, char *file_data);
 
 #endif

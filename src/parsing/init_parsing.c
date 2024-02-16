@@ -6,7 +6,7 @@
 /*   By: edupless <edupless@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 09:05:13 by zabdulza          #+#    #+#             */
-/*   Updated: 2024/02/07 15:35:57 by edupless         ###   ########.fr       */
+/*   Updated: 2024/02/15 17:09:42 by edupless         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,13 +70,14 @@ static char	get_init_player_dir(char **map)
 	return (-1);
 }
 
-void	map_parsing(int ac, char *av[], t_game *game)
+bool	map_parsing(int ac, char *av[], t_game *game)
 {
 	t_parse	parse;
 
 	ft_init_parse(&parse);
 	ft_init_data(&game->data);
-	ft_start(ac, av, &game->data, &parse);
+	if (ft_start(ac, av, &game->data, &parse) < 0)
+		return (false);
 	game->bg_colors[CLR_BOT] = game->data.floor_color[0] << 24
 		| game->data.floor_color[1] << 16
 		| game->data.floor_color[2] << 8
@@ -93,4 +94,5 @@ void	map_parsing(int ac, char *av[], t_game *game)
 	game->player.plane.y = 0;
 	initial_player_direction(get_init_player_dir(game->data.map),
 		&game->player.dir, &game->player.plane);
+	return (true);
 }
